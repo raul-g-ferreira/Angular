@@ -1,0 +1,17 @@
+<p>Hola amigos! {{ name }}</p>
+
+<button (click)="submit()">botão top</button>
+
+@if (deveMostrarTitulo) {
+    <h1>Meu titulo</h1>
+}@else if (name == "Raul") {
+    <h1>Titulo do raul</h1>
+}@else {
+    <h1>Nao foi verdadeiro</h1>
+}
+
+@for (item of listItems; track item) {
+    <p>{{item}}</p>
+}
+
+<h1>{{minhaPropsDeFora}}</h1>
