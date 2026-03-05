@@ -1,8 +1,19 @@
 import { Routes } from '@angular/router';
-import { BookImportComponent } from './components/book-import-component/book-import-component';
-import { ViewBooksComponent } from './components/view-books-component/view-books-component';
+import { Home } from './screens/home/home';
+import { Counter } from './screens/counter/counter';
+import { Todos } from './screens/todos/todos';
 
 export const routes: Routes = [
-  // { path: '', component: ViewBooksComponent }, // Define como página inicial
-  // { path: 'import', component: BookImportComponent },
+  {
+    path: '',
+    component: Home,
+  },
+  {
+    path:'counter',
+    component: Counter
+  },
+  {
+    path: 'todos',
+    component: Todos
+  }
 ];

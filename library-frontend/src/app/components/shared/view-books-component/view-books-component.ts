@@ -1,5 +1,5 @@
 import {signal, Component, OnInit } from '@angular/core';
-import { Book, BookService } from '../../services/book-service';
+import { Book, BookService } from '../../../services/book-service';
 
 
 @Component({

@@ -1,4 +1,4 @@
-import { BookService, Book } from '../../services/book-service';
+import { BookService, Book } from '../../../services/book-service';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
