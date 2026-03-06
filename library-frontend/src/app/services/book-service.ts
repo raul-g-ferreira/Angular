@@ -2,13 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-export interface Book {
-  id?: number;
-  title: string;
-  author: string;
-  category: string;
-}
+import { Book } from '../model/book.entity';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +10,12 @@ export interface Book {
 export class BookService {
   private baseUrl = environment.apiUrl + '/book';
 
+
   constructor(private http: HttpClient) {}
+
+  createBook(book: Book): Observable<Book> {
+    return this.http.post<Book>(`${this.baseUrl}/create`, book);
+  }
 
   importBook(isbn: string): Observable<Book> {
     return this.http.post<Book>(`${this.baseUrl}/import/${isbn}`, {});
@@ -29,4 +28,6 @@ export class BookService {
   deleteBook(bookId: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/delete/${bookId}`, {});
   }
+
+
 }

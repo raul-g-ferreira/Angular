@@ -1,0 +1,17 @@
+.page{
+  display: flex;
+  height: 100vh; /* Altura total da janela */
+  overflow: hidden; /* Impede a página inteira de rolar */
+}
+aside {
+  width: 250px;
+  height: 100%;
+  flex-shrink: 0; /* Impede a sidebar de "esmagar" */
+  background-color: #18181b;
+  overflow-y: auto; /* Caso o menu seja muito grande, ele rola sozinho */
+}
+main {
+  flex-grow: 1;
+  height: 100%;
+  background-color: #000; /* Cor de fundo conforme sua imagem */
+}

@@ -1,7 +1,8 @@
-import { BookService, Book } from '../../../services/book-service';
+import { BookService } from '../../../services/book-service';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { Book } from '../../../model/book.entity';
 
 @Component({
   selector: 'app-book-import-component',

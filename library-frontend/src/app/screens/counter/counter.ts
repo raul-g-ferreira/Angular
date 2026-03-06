@@ -18,4 +18,8 @@ export class Counter {
   decrement() {
     this.count.update(n => n - 1);
   }
+
+  reset() {
+    this.count.set(0);
+  }
 }
